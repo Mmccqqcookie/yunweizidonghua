@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>initially</title>
+    <link rel="stylesheet" type="text/css" href="/statics/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/statics/css/base/base.css">
+    <link rel="stylesheet" type="text/css" href="/statics/fontawesome4.7.0/css/font-awesome.min.css">
+    <script rel="script" type="text/javascript" src="/statics/js/Jquery/jquery-1.11.1.min.js"></script>
+    <script rel="script" type="text/javascript" src="/statics/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script rel="script" type="text/javascript" src="/statics/js/base/base.js"></script>
+     {% block css%}{% end %}
+     {% block js%}{% end %}
+</head>
+<body>
+<div class="pg_header">
+    <div class="pg_top">
+        <div class="title"><div class="h2">运维平台</div></div>
+        <div class="top_memu">
+            <ul>
+                <li class="touxiang-li"><div class="touxiang-div"><img class='touxiang' src=""></div></li>
+                <li class="detail">{{login_user}}<i style="margin: 0 4px" class="fa fa-sort-desc"></i></li>
+                <li><i class="fa fa-bell"></i></li>
+                <li><i class="fa fa-envelope"></i></li>
+            </ul>
+        </div>
+        <div class="logout hider">
+            <ul>
+                <li><a href="#">详细资料</a></li>
+                <li><a href="/logout">退出</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="pg_body">
+    <div class="pg_left">
+        <div class="panelinfo memu_selected">
+            <div class="panell">
+                <div class="h3">仪表面板</div>
+            </div>
+        </div>
+        <div class="usersmessageinfo  memu_selected">
+            <div class="usersmessage">
+                <div class="h3">用户信息<i class="fa fa-list-ul"></i></div>
+            </div>
+            <div class="usermessageinfo_memu hider hoverli ">
+                <ul>
+                    <li><a href="/users">用户</a></li>
+                    <li><a href="/user_group">用户组</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hostinfo  memu_selected">
+            <div class="host">
+                <div class="h3">主机相关<i class="fa fa-list-ul"></i></div>
+            </div>
+            <div class="hostinfo_memu hider hoverli">
+                <ul>
+                    <li><a href="/hosts">主机信息</a></li>
+                    <li><a href="/host_user">主机密码</a></li>
+                    <li><a>机房资产</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="webconsleinfo  memu_selected ">
+            <div class="webconsle">
+                <div class="h3"><a href="/webssh">Web Consle</a></div>
+            </div>
+        </div>
+        <div class="logmessageinfo  memu_selected">
+            <div class="logmessage">
+                <div class="h3">日志<i class="fa fa-list-ul"></i></div>
+            </div>
+            <div class="logmessageinfo_memu hider hoverli">
+                <ul>
+                    <li><a>历史命令</a></li>
+                    <li><a>日志信息</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fileuploadinfo  memu_selected">
+            <div class="fileupload">
+                <div class="h3">命令与分发
+                    <i class="fa fa-list-ul"></i>
+                </div>
+            </div>
+            <div class="fileuploadinfo_memu hider hoverli">
+                <ul>
+                    <li><a href="/ssh_command">远程命令</a></li>
+                    <li><a href="/import_project">脚本分发</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="crontabinfo memu_selected">
+            <div class="crontab">
+                <div class="h3"><a href="/crontab">定时任务</a></div>
+            </div>
+        </div>
+        <div class="checkhostinfo memu_selected">
+            <div class="checkhost">
+                <div class="h3"><a>主机监控</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="pg_right">
+        <div class="pg_right_content">
+        {% block pg_right_body%}{% end %}
+        <div class="pg_footer">
+        {% block pg_rigth_footer %}{% end %}
+        </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

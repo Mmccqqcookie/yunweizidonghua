@@ -1,0 +1,122 @@
+{% extends '../base/base.html'%}
+{% block css%}
+<link rel="stylesheet" type="text/css" href="/statics/css/users/add_users.css">
+{% end %}
+{% block js%}
+<script type="text/javascript" rel="script" src="/statics/js/users/users.js"></script>
+{% end %}
+{% block pg_right_body%}
+<div class="pg_right_toptitle">
+	<div class="h3">修改主机</div>
+</div>
+<div class="update_user_message">
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="post" >
+                <div class="h2">主机</div>
+                <div class="form-group hider">
+                    <label class="col-md-2 control-label" for="id_user">Id</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_user' class="form-control" name="id" value={{host.id}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_username">Hostname</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_username' class="form-control" name="hostname" value={{host.hostname}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_password">Ip</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_password' class="form-control" name="ip" value={{host.ip}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_email">Memory</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_email' class="form-control" name="memory" value={{host.memory}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_tel">Disk</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_tel' class="form-control" name="disk" value={{host.disk}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">用户类型</label>
+                    <div class="col-md-9 control-div">
+                        {% if host.status_type_id == 1 %}
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" checked>在线
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">下线
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">维护
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4">报修
+                        </label>
+                        {% elif host.status_type_id == 2 %}
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="1" >在线
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio6" value="2" checked>下线
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio7" value="3">维护
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio8" value="4">报修
+                        </label>
+                        {% elif host.status_type_id == 3 %}
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio9" value="1" >在线
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio10" value="2">下线
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio11" value="3" checked>维护
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio12" value="4">报修
+                        </label>
+                        {% else %}
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio13" value="1" >在线
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio14" value="2">下线
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio15" value="3">维护
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio16" value="4" checked>报修
+                        </label>
+                        {% end %}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="btn btn-primary" type="submit">提交</button>
+                        <button class="btn btn-default" type="reset">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% end %}
+{% block pg_right_footer%}{% end %}

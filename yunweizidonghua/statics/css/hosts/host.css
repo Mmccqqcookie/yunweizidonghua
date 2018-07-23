@@ -1,0 +1,84 @@
+.pg_body .ground{
+    position: absolute;
+    left: 182px;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    background-color: oldlace;
+}
+.pg_body .ground .user-mess{
+    height: 40px;
+    background-color: #46b8da;
+}
+.pg_body .ground .user-mess .mess{
+    width: 100px;
+    display: inline-block;
+    font-size: 20px;
+    font-style: inherit;
+    padding: 0 10px;
+    line-height: 40px;
+    font-family: 华文行楷;
+}
+.pg_body .ground .user-mess .search {
+    float: right;
+    margin: 0 80px;
+    line-height: 40px;
+    position: relative;
+}
+.pg_body .ground .user-mess .search ul{
+    line-height: 40px;
+}
+.pg_body .ground .user-mess .search ul li{
+    float: right;
+    font-size: 18px;
+}
+.pg_body .ground .user-mess .search ul li input{
+    border: none;
+    height: 30px;
+    width: 150px;
+    border-radius: 10%;
+    padding-right: 40px;
+}
+.pg_body .ground .user-mess .search ul li i{
+    width: 30px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    line-height: 40px;
+}
+.pg_body .ground .body_memu {
+    height: 40px;
+}
+.pg_body .ground .body_memu .memu{
+    width: 600px;
+    height: 40px;
+    margin: 0 auto;
+}
+.pg_body .ground .body_memu .memu ul{
+    float: left;
+}
+
+.pg_body .ground .body_memu ul li{
+    float: left;
+    height: 25px;
+    margin: 0 40px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+table{
+    margin: 0 auto;
+    margin-top: 5px;
+}
+table tr th{
+    height: 60px;
+    width: 200px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+table tr td{
+    height: 40px;
+    width: 200px;
+    border: 2px dashed black;
+    text-align: center;
+}

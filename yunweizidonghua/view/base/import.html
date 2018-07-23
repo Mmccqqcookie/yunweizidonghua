@@ -1,0 +1,39 @@
+{% extends '../base/base.html'%}
+{% block css%}
+<link rel="stylesheet" type="text/css" href="/statics/css/users/add_users.css">
+{% end %}
+{% block js%}
+<script type="text/javascript" src="/statics/js/base/import.js"></script>
+{% end %}
+{% block pg_right_body%}
+<div class="pg_right_toptitle">
+	<div class="h3">{{title}}</div>
+</div>
+<div class="update_user_message">
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="post">
+                <div class="h2">{{title[0:2]}}</div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_upload_file">{{title}}</label>
+                    <div class="col-sm-1">
+                        <input type="file" required id='id_upload_file' class="control-label" name={{import_model_type}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="btn btn-primary upload_file" type="button">提交</button>
+                        <button class="btn btn-default" type="reset">重置</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                <div class="add_message col-sm-offset-2">
+                </div>
+            </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% end %}

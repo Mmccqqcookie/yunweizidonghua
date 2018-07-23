@@ -1,0 +1,43 @@
+{% extends '../base/base.html'%}
+{% block css%}
+<link rel="stylesheet" type="text/css" href="/statics/css/users/add_users.css">
+{% end %}
+{% block js%}
+<script type="text/javascript" rel="script" src="/statics/js/users/users.js"></script>
+{% end %}
+{% block pg_right_body%}
+<div class="pg_right_toptitle">
+	<div class="h3">添加主机密码</div>
+</div>
+<div class="update_user_message">
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="post" action="/add_host_username">
+                <div class="h2">ADD PassWord</div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_host_username">Host_Username</label>
+                    <div class="col-md-6">
+                        <input type="text" required id='id_host_username' class="form-control" name="host_user" placeholder="zhangshan">
+                        <div class="prompt">*必填</div><span style="color: red">{{message}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_host_username_password">Host_Username_Password</label>
+                    <div class="col-md-6">
+                        <input type="password" required id='id_host_username_password' class="form-control" name="host_user_password" placeholder="zhangshan">
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="btn btn-primary" type="submit">提交</button>
+                        <button class="btn btn-default" type="reset">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% end %}
+{% block pg_right_footer%}{% end %}

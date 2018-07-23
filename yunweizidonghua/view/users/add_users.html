@@ -1,0 +1,68 @@
+{% extends '../base/base.html'%}
+{% block css%}
+<link rel="stylesheet" type="text/css" href="/statics/css/users/add_users.css">
+{% end %}
+{% block js%}
+<script type="text/javascript" rel="script" src="/statics/js/users/users.js"></script>
+{% end %}
+{% block pg_right_body%}
+<div class="pg_right_toptitle">
+	<div class="h3">修改用户</div>
+</div>
+<div class="update_user_message">
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="post" action="/add_users">
+                <div class="h2">账号</div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_username">用户名</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_username' class="form-control" name="username" placeholder="12324566">
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_password">密码</label>
+                    <div class="col-md-9">
+                        <input type="password" required id='id_password' class="form-control" name="password" placeholder="张三">
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_email">email</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_email' class="form-control" name="email" placeholder="412252455415@qq.com">
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_tel">tel</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_tel' class="form-control" name="tel" placeholder="17600000000">
+                        <div class="prompt">*必填</div><span style="color: red">{{message}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">用户类型</label>
+                    <div class="col-md-9 control-div">
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="2">普通用户
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="1">admin
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="btn btn-primary" type="submit">提交</button>
+                        <button class="btn btn-default" type="reset">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% end %}
+{% block pg_right_footer%}{% end %}

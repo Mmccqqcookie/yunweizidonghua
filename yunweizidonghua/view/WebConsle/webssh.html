@@ -1,0 +1,83 @@
+{% extends '../base/base.html'%}
+{% block css%}
+<link href="/statics/img/favicon.png" rel="icon" type="image/png">
+<link href="/statics/css/WebConsle/xterm.min.css" rel="stylesheet" type="text/css"/>
+<link href="/statics/css/WebConsle/fullscreen.min.css" rel="stylesheet" type="text/css"/>
+<style>
+    .container {
+        margin-top: 20px;
+    }
+
+    .pg_right .pg_right_content .row{
+        margin: 5px 10px 0 15px;
+        background-color: white;
+        min-height: 700px;
+    }
+    .pg_right .pg_right_toptitle .h3{
+        margin: 2px;
+        height: 40px;
+        line-height: 40px;
+        background-color: white;
+        border-bottom: 2px solid black;
+    }
+    .form-group{
+        margin-bottom: 15px;
+        margin-top: 25px;
+        height: 70px;
+    }
+</style>
+{% end %}
+{% block js%}
+<script src="/statics/js/WebConsle/popper.min.js"></script>
+<script src="/statics/js/WebConsle/xterm.min.js"></script>
+<script src="/statics/js/WebConsle/fullscreen.min.js"></script>
+<script src="/statics/js/WebConsle/main.js"></script>
+{% end %}
+{% block pg_right_body%}
+<div class="pg_right_toptitle">
+	<div class="h3">远程连接主机</div>
+</div>
+<div class="row">
+    <form id="connect" action="" type="post" enctype="multipart/form-data">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label class="col-sm-2" for="Hostname">Hostname</label>
+                <div class="col-sm-9">
+                    <input class="form-control" id="Hostname" type="text" name="hostname" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2" for="Port">Port</label>
+                <div class="col-sm-9">
+                    <input class="form-control" id="Port" type="text" name="port" value="22">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2" for="Username">Username</label>
+                <div class="col-sm-9">
+                    <input class="form-control" id="Username" type="text" name="username" value="root">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2" for="Password">Password</label>
+                <div class="col-sm-9">
+                    <input class="form-control" id="Password" type="password" name="password" placeholder="" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <button class="btn btn-primary" type="submit">提交</button>
+                    <button class="btn btn-default" type="reset">重置</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <div id="status" style="color: red;"></div>
+    <div id="terminal"></div>
+</div>
+{% end %}
+{% block pg_right_footer%}{% end %}
+
+

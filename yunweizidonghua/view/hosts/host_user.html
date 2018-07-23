@@ -1,0 +1,51 @@
+{% extends '../base/base.html'%}
+{% block css%}
+<link rel="stylesheet" type="text/css" href="/statics/css/users/users.css">
+<link rel="stylesheet" type="text/css" href="/statics/css/hosts/host.css">
+{% end %}
+{% block js%}
+<script rel="script" type="text/javascript"  src="/statics/js/hosts/host.js"></script>
+{% end %}
+{% block pg_right_body%}
+<div class="pg_right_toptitle">
+	<div class="h3">主机用户</div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox-title">
+            <div class="creat_user col-md-1">
+                <div class="h5"><a href="/add_host_username">添加用户</a></div>
+            </div>
+            <div class="download_usermodel col-md-offset-8 col-md-1">
+                <div class="h5"><a href="/download_model/host_model" name="filename" value="user_model">模板下载</a></div>
+            </div>
+            <div class="import_users col-md-1">
+                <div class="h5"><a href="/import/hosts">批量导入</a></div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <th class="col-md-1 "><label>全选</label> <input type="checkbox" class='quanxuan'  name="quanxuan" value="quanxuan"></th>
+                    <th class="col-md-3">Host_Username</th>
+                    <th class="col-md-3">Password</th>
+                    <th class="col-md-3">动作</th>
+                </thead>
+                <tbody>
+                    {% for item in host_username_list %}
+                    <tr>
+                        <td class="col-md-1"><input type="checkbox" name="host_add" value={{item.id}}></td>
+                        <td class="col-md-2">{{ item.username}}</td>
+                        <td class="col-md-2">{{item.password}}</td>
+                        <td class="col-md-2"><button><a href="/update_edit/add_host_user/{{item.id}}">编辑</a></button> | <button><a href="/del/add_host_user/{{item.id}}">删除</a></button></td>
+                    </tr>
+                    {% end %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+{% end %}
+{% block pg_footer%}{% end %}

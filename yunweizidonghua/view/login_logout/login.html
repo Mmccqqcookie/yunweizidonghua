@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>initially</title>
+    <link rel="stylesheet" type="text/css" href="/statics/bootstrap-3.3.7/css/bootstrap.css">
+    <script type="text/javascript" src="/statics/js/Jquery/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/statics/js/login.js"></script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #E0EEEE;
+        }
+        .login{
+            padding-top: 15px;
+            height: 200px;
+            width: 500px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -250px;
+            margin-top: -200px;
+        }
+        .input_hei{
+            height: 60px;
+        }
+         .input_hei input{
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="ground">
+    <div class="login">
+        <form class="form-horizontal" method="post" action="/" >
+          <div class="form-group input_hei">
+            <label for="inputEmail3" class="col-sm-4 control-label">Email or 用户名</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name='email' id="inputEmail3" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group input_hei">
+            <label for="inputPassword3" class="col-sm-4 control-label">Password</label>
+            <div class="col-sm-8">
+                <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
+                <span>{{message}}</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-10">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember me
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-10">
+              <button type="submit" class="tijiao">Sign in</button>
+            </div>
+          </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.pg_right .pg_right_toptitle .h3{
+    margin: 2px;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    border-bottom: 2px solid black;
+}
+.update_user_message{
+    margin: 5px 10px 0 15px;
+    min-height: 500px;
+    background-color: white;
+}
+.row{
+    margin: 5px 10px 0 15px;
+    background-color: white;
+    min-height: 700px;
+}
+.row .h2{
+    margin: 10px 15px 50px 20px;
+}
+.form-group{
+    margin-bottom: 20px;
+    height: 70px;
+}
+.control-label{
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 0;
+    text-align: right;
+}
+.control-div{
+    padding-top: 7px;
+    margin-bottom: 0;
+
+}
+.label-right{
+    text-align: right;
+    padding-right: 5px;
+    margin-right: 10px;
+}
+
+.select-width{
+    min-width: 100px;
+}

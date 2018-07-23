@@ -1,0 +1,84 @@
+{% extends '../base/base.html'%}
+{% block css%}
+<link rel="stylesheet" type="text/css" href="/statics/css/users/add_users.css">
+{% end %}
+{% block js%}
+<script type="text/javascript" rel="script" src="/statics/js/users/users.js"></script>
+{% end %}
+{% block pg_right_body%}
+<div class="pg_right_toptitle">
+	<div class="h3">修改用户</div>
+</div>
+<div class="update_user_message">
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="post" >
+                <div class="h2">账号</div>
+                <div class="form-group hider">
+                    <label class="col-md-2 control-label" for="user_id">id</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='user_id' class="form-control" name="id" value={{user.id}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_username">用户名</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_username' class="form-control" name="username" value={{user.user}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_password">密码</label>
+                    <div class="col-md-9">
+                        <input type="password" required id='id_password' class="form-control" name="password" value={{user.password}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_email">email</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_email' class="form-control" name="email" autocomplete="off" value={{user.email}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_tel">tel</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_tel' class="form-control" name="tel" value={{user.tel}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">用户类型</label>
+                    <div class="col-md-9 control-div">
+                        {% if user.user_type_id == 1 %}
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="2" >普通用户
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="1" checked>admin
+                        </label>
+                        {% else %}
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2" checked >普通用户
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="1" >admin
+                        </label>
+                        {% end %}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="btn btn-primary" type="submit">提交</button>
+                        <button class="btn btn-default" type="reset">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% end %}
+{% block pg_right_footer%}{% end %}

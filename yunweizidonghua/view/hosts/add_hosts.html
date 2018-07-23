@@ -1,0 +1,74 @@
+{% extends '../base/base.html'%}
+{% block css%}
+<link rel="stylesheet" type="text/css" href="/statics/css/users/add_users.css">
+{% end %}
+{% block js%}
+<script type="text/javascript" rel="script" src="/statics/js/users/users.js"></script>
+{% end %}
+{% block pg_right_body%}
+<div class="pg_right_toptitle">
+	<div class="h3">修改主机</div>
+</div>
+<div class="update_user_message">
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="post" action="/add_host">
+                <div class="h2">主机</div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_username">hostname</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_username' class="form-control" name="hostname" placeholder="12324566">
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_password">ip</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_password' class="form-control" name="ip" placeholder="张三">
+                        <div class="prompt">*必填</div><span style="color: red">{{message}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_email">memory</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_email' class="form-control" name="memory" placeholder="412252455415@qq.com">
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_tel">disk</label>
+                    <div class="col-md-9">
+                        <input type="text" required id='id_tel' class="form-control" name="disk" placeholder="17600000000">
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">用户类型</label>
+                    <div class="col-md-9 control-div">
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">在线
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">下线
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">维护
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4">报修
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="btn btn-primary" type="submit">提交</button>
+                        <button class="btn btn-default" type="reset">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% end %}
+{% block pg_right_footer%}{% end %}

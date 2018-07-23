@@ -1,0 +1,34 @@
+.pg_right .pg_right_toptitle .h3{
+    margin: 2px;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    border-bottom: 2px solid black;
+}
+.pg_right  .h5{
+    margin: 8px 20px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    min-width: 70px;
+    background-color: #1ab394;
+    border-color: #1ab394;
+}
+.pg_right  .h5:hover{
+    cursor: pointer;
+}
+.pg_right  .h5 a{
+    color: white;
+    text-decoration: none;
+}
+.pg_right .creat_user .h5:hover a{
+    text-decoration: none;
+}
+.pg_right .pg_right_content .row{
+    margin: 5px 10px 0 15px;
+    background-color: white;
+    min-height: 700px;
+}
+.row .ibox-content .pagination li a span{
+    color: #337ab7;
+}

@@ -1,0 +1,50 @@
+{% extends '../base/base.html'%}
+{% block css%}
+<link rel="stylesheet" type="text/css" href="/statics/css/users/add_users.css">
+{% end %}
+{% block js%}
+<script type="text/javascript" rel="script" src="/statics/js/users/users.js"></script>
+{% end %}
+{% block pg_right_body%}
+<div class="pg_right_toptitle">
+	<div class="h3">修改主机密码</div>
+</div>
+<div class="update_user_message">
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="post">
+                <div class="h2">Update PassWord</div>
+                <div class="form-group hider">
+                    <label class="col-md-2 control-label" for="id_host_user_id">Host_User_id</label>
+                    <div class="col-md-6">
+                        <input type="text" required id='id_host_user_id' class="form-control" name="host_user_id" value={{host_user.id}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_host_username">Host_Username</label>
+                    <div class="col-md-6">
+                        <input type="text" required id='id_host_username' class="form-control" name="host_user" value={{host_user.username}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="id_host_username_password">Host_Username_Password</label>
+                    <div class="col-md-6">
+                        <input type="password" required id='id_host_username_password' class="form-control" name="host_user_password" value={{host_user.password}}>
+                        <div class="prompt">*必填</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="btn btn-primary" type="submit">提交</button>
+                        <button class="btn btn-default" type="reset">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% end %}
+{% block pg_right_footer%}{% end %}
